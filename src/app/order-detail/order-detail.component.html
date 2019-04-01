@@ -1,9 +1,19 @@
 <div *ngIf="order">
-  <h2>{{order.description | uppercase}} Details</h2>
-  <div><span>id: </span>{{order.id}}</div>
+  <h2>{{order.items[0].description | uppercase}} Details</h2>
+  <div><span>id: </span>{{order.orderId}}</div>
   <div>
-    <label>name:
-      <input [(ngModel)]="order.description" placeholder="description"/>
+    <label>Description:
+      <input [(ngModel)]="order.items[0].description" placeholder="description"/>
+    </label>
+  </div>
+  <div>
+    <label>Item Code:
+      <input [(ngModel)]="order.items[0].itemCode" placeholder="item code"/>
+    </label>
+  </div>
+  <div>
+    <label>Quantity:
+      <input [(ngModel)]="order.items[0].quantity" placeholder="quantity"/>
     </label>
   </div>
   <button (click)="goBack()">go back</button>

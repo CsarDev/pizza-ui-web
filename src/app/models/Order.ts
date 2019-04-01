@@ -1,6 +1,5 @@
+import { Item } from './Item';
 export interface Order {
-  id?: number;
-  quantity: number;
-  itemCode: string;
-  description: string;
+  orderId?: number;
+  items: Item[];
 }

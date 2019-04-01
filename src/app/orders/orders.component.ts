@@ -27,10 +27,14 @@ export class OrdersComponent implements OnInit {
         .subscribe(orders => this.orders = orders);
   }
 
-  add(description: string): void {
+  add(description: string, itemCode: string, quantityArg: string): void {
     description = description.trim();
-    if (!description) { return; }
-    this.orderService.addOrder({ description } as Order)
+    itemCode = itemCode.trim();
+    const quantity = parseInt(quantityArg.trim());
+
+    if (!description || !itemCode || !quantity) { return; }
+
+    this.orderService.addOrder({items: [{ description, itemCode, quantity }]} as Order)
       .subscribe(order => {
         this.orders.push(order);
       });

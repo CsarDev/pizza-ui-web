@@ -1,9 +1,9 @@
 <h3>Top Orders</h3>
 <div class="grid grid-pad">
   <a *ngFor="let order of orders" class="col-1-4"
-      routerLink="/detail/{{order.id}}">
+      routerLink="/detail/{{order.orderId}}">
     <div class="module hero">
-      <h4>{{order.description}}</h4>
+      <h4>{{order.orderId}}:{{order.items[0].description}}</h4>
     </div>
   </a>
 </div>

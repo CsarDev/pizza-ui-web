@@ -16,7 +16,7 @@ const httpOptions = {
 export class OrderService {
 
   private ordersUrl = 'api/orders';  // URL to web api
-  private baseurl = 'https://g1orderservice.azurewebsites.net/';
+  private baseurl = 'https://g1containerorderservice.azurewebsites.net/';
 
   constructor(
     private http: HttpClient,

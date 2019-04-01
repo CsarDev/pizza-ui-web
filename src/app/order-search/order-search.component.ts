@@ -7,7 +7,7 @@ import {
 } from 'rxjs/operators';
 
 import { Order } from '../models/Order';
-import { OrderService} from '../order.service'
+import { OrderService} from '../order.service';
 
 @Component({
   selector: 'app-order-search',

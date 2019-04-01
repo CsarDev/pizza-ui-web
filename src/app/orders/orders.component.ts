@@ -34,7 +34,7 @@ export class OrdersComponent implements OnInit {
 
     if (!description || !itemCode || !quantity) { return; }
 
-    this.orderService.addOrder({ description, itemCode, quantity } as Order)
+    this.orderService.addOrder({items: [{ description, itemCode, quantity }]} as Order)
       .subscribe(order => {
         this.orders.push(order);
       });

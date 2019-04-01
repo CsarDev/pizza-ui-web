@@ -5,8 +5,8 @@
 
   <ul class="search-result">
     <li *ngFor="let order of orders$ | async" >
-      <a routerLink="/detail/{{order.id}}">
-        {{order.description}}
+      <a routerLink="/detail/{{order.orderId}}">
+        {{order.items[0].description}}
       </a>
     </li>
   </ul>

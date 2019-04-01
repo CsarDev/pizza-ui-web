@@ -1,5 +1,6 @@
 export interface Order {
   id?: number;
-  TotalPrice: number;
-  OrderStatus: string;
+  quantity: number;
+  itemCode: string;
+  description: string;
 }

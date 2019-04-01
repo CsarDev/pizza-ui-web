@@ -4,12 +4,24 @@
   <label>Order description:
     <input #orderDescription />
   </label>
+</div>
+<div>
+  <label>Order Item Code:
+    <input #orderItemCode />
+  </label>
+</div>
+<div>
+  <label>Order quantity:
+    <input #orderQuantity />
+  </label>
+</div>
+<div>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(orderDescription.value); orderDescription.value=''">
+  <button (click)="add(orderDescription.value, orderItemCode.value, orderQuantity.value); orderDescription.value=''; orderItemCode.value=''; orderQuantity.value=''">
     add
   </button>
 </div>
-
+<br/>
 <ul class="heroes">
   <li *ngFor="let order of orders">
     <a routerLink="/detail/{{order.id}}">

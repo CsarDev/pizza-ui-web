@@ -3,7 +3,7 @@
   <a *ngFor="let order of orders" class="col-1-4"
       routerLink="/detail/{{order.id}}">
     <div class="module hero">
-      <h4>{{order.description}}</h4>
+      <h4>{{order.id}}:{{order.description}}</h4>
     </div>
   </a>
 </div>

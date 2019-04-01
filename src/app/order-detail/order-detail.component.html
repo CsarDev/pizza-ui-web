@@ -2,8 +2,18 @@
   <h2>{{order.description | uppercase}} Details</h2>
   <div><span>id: </span>{{order.id}}</div>
   <div>
-    <label>name:
+    <label>Description:
       <input [(ngModel)]="order.description" placeholder="description"/>
+    </label>
+  </div>
+  <div>
+    <label>Item Code:
+      <input [(ngModel)]="order.itemCode" placeholder="item code"/>
+    </label>
+  </div>
+  <div>
+    <label>Quantity:
+      <input [(ngModel)]="order.quantity" placeholder="quantity"/>
     </label>
   </div>
   <button (click)="goBack()">go back</button>
